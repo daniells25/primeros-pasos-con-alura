@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA SORTEO </h1>
+
+<script>
+
+    function saltarLinea() {
+        document.write("<br>");       
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function loteria (n){
+        return Math.round(Math.random()*n);
+    }
+
+    var numeroSistema = loteria(10);
+    var numeroUsuario = parseInt(prompt("Ingrese un número entre 0-10"));
+
+    if (numeroSistema  == numeroUsuario){
+        imprimir("Haz acertado");
+    }
+
+    else {
+         if (numeroSistema > numeroUsuario){
+        imprimir("Haz errado, el número quediste " + numeroUsuario + " es menor que la opción del sistema " + numeroSistema);
+           }
+         else {
+            imprimir("Haz errado, el número quediste " + numeroUsuario + "  es mayor que la opción dada por el sistema " + numeroSistema);
+           } 
+        }
+loteria 
+
+</script>
